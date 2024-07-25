@@ -5,5 +5,5 @@ exports.calculatePrice = (req, res) => {
     const { order, hasMemberCard } = req.body;
     const calculator = new Calculator(hasMemberCard);
     const price = calculator.calculatePrice(order);
-    res.json({ price });
+    return res.json({ price });
 };

@@ -28,8 +28,8 @@ class Calculator {
         
             if (discountRates.hasOwnProperty(item)) {
                 const pairs = Math.floor(quantity / 2);
-                const pricePerPairs = pricePerItem * 2;
-                discounts += pairs * pricePerPairs * discountRates[item];
+                const pricePerPairs = pricePerItem * discountRates[item] * 2;
+                discounts += pairs * pricePerPairs;
             }
         }
         total -= discounts;
